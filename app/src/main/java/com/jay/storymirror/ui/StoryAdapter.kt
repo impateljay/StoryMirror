@@ -60,7 +60,6 @@ class StoryAdapter(private val context: Context, private val problemSolverList: 
             .centerCrop().into(holder.thumbnail)
 
         holder.itemView.setOnClickListener {
-            Toast.makeText(context, problemSolverList[position].title, Toast.LENGTH_SHORT).show()
             val intent = Intent(context, StoryReadActivity::class.java)
             intent.putExtra("storyId", problemSolverList[position].storyId)
             context.startActivity(intent)
