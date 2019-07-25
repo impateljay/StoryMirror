@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">StoryMirror</string>
+    <string name="recommendations">Recommendations</string>
+    <string name="paid_stories">Paid Stories</string>
+    <string name="great_first_reads">Great First Reads</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="thumbnail">thumbnail</string>
+</resources>

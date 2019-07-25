@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/image_view_thumbnail"
+        android:layout_width="142dp"
+        android:layout_height="222dp"
+        android:layout_centerVertical="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars[0]"
+        android:contentDescription="@string/thumbnail" />
+
+    <TextView
+        android:id="@+id/text_view_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toEndOf="@id/image_view_thumbnail"
+        android:layout_toRightOf="@id/image_view_thumbnail"
+        android:gravity="center_vertical"
+        android:textColor="#000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_view_thumbnail"
+        app:layout_constraintTop_toTopOf="@+id/image_view_thumbnail"
+        tools:text="Title" />
+
+    <TextView
+        android:id="@+id/text_view_author"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_view_thumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_title"
+        tools:text="Author" />
+
+    <TextView
+        android:id="@+id/text_view_reads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:drawableStart="@drawable/ic_visibility_black_24dp"
+        android:drawableLeft="@drawable/ic_visibility_black_24dp"
+        android:drawablePadding="2dp"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/image_view_thumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_author"
+        tools:text="reads" />
+
+    <TextView
+        android:id="@+id/text_view_votes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:drawableStart="@drawable/ic_star_black_24dp"
+        android:drawableLeft="@drawable/ic_star_black_24dp"
+        android:drawablePadding="2dp"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/text_view_reads"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_author"
+        tools:text="votes" />
+
+    <TextView
+        android:id="@+id/text_view_description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="4dp"
+        android:ellipsize="end"
+        android:maxLines="7"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_view_thumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_reads"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Description" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="@+id/image_view_thumbnail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_view_thumbnail">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!-- Chips can be declared here, or added dynamically. -->
+
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
